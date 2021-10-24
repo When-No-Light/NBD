@@ -1,0 +1,371 @@
+MongoDB shell version v5.0.3
+connecting to: mongodb://127.0.0.1:27017/nbd?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("39d85905-dd91-4a01-9d11-7d9a2656e7b7") }
+MongoDB server version: 5.0.3
+[
+	{
+		"_id" : "AMD",
+		"credit_sum" : 24609.33,
+		"credit_avg" : 4921.866
+	},
+	{
+		"_id" : "NPR",
+		"credit_sum" : 5792.26,
+		"credit_avg" : 5792.26
+	},
+	{
+		"_id" : "MYR",
+		"credit_sum" : 4781.12,
+		"credit_avg" : 4781.12
+	},
+	{
+		"_id" : "VEF",
+		"credit_sum" : 8333.28,
+		"credit_avg" : 4166.64
+	},
+	{
+		"_id" : "CDF",
+		"credit_sum" : 12228.8,
+		"credit_avg" : 6114.4
+	},
+	{
+		"_id" : "SEK",
+		"credit_sum" : 70840.19,
+		"credit_avg" : 5060.013571428572
+	},
+	{
+		"_id" : "PHP",
+		"credit_sum" : 118606.28,
+		"credit_avg" : 4941.928333333333
+	},
+	{
+		"_id" : "CAD",
+		"credit_sum" : 58375.6,
+		"credit_avg" : 5306.872727272727
+	},
+	{
+		"_id" : "MAD",
+		"credit_sum" : 3818.85,
+		"credit_avg" : 3818.85
+	},
+	{
+		"_id" : "EUR",
+		"credit_sum" : 245091.47,
+		"credit_avg" : 4901.8294
+	},
+	{
+		"_id" : "THB",
+		"credit_sum" : 23021.96,
+		"credit_avg" : 4604.392
+	},
+	{
+		"_id" : "CNY",
+		"credit_sum" : 470700.38,
+		"credit_avg" : 4954.740842105263
+	},
+	{
+		"_id" : "TZS",
+		"credit_sum" : 7052.370000000001,
+		"credit_avg" : 3526.1850000000004
+	},
+	{
+		"_id" : "AFN",
+		"credit_sum" : 16755.49,
+		"credit_avg" : 5585.163333333334
+	},
+	{
+		"_id" : "EGP",
+		"credit_sum" : 5579.3,
+		"credit_avg" : 5579.3
+	},
+	{
+		"_id" : "ZWL",
+		"credit_sum" : 5792.17,
+		"credit_avg" : 5792.17
+	},
+	{
+		"_id" : "PKR",
+		"credit_sum" : 18938,
+		"credit_avg" : 4734.5
+	},
+	{
+		"_id" : "MWK",
+		"credit_sum" : 3574.42,
+		"credit_avg" : 3574.42
+	},
+	{
+		"_id" : "KRW",
+		"credit_sum" : 13379.82,
+		"credit_avg" : 6689.91
+	},
+	{
+		"_id" : "GBP",
+		"credit_sum" : 6149.19,
+		"credit_avg" : 6149.19
+	},
+	{
+		"_id" : "MNT",
+		"credit_sum" : 21715.61,
+		"credit_avg" : 5428.9025
+	},
+	{
+		"_id" : "ZMW",
+		"credit_sum" : 5569.56,
+		"credit_avg" : 5569.56
+	},
+	{
+		"_id" : "RWF",
+		"credit_sum" : 4632.88,
+		"credit_avg" : 4632.88
+	},
+	{
+		"_id" : "KZT",
+		"credit_sum" : 3788.95,
+		"credit_avg" : 3788.95
+	},
+	{
+		"_id" : "MKD",
+		"credit_sum" : 3835.05,
+		"credit_avg" : 3835.05
+	},
+	{
+		"_id" : "VND",
+		"credit_sum" : 36160.26,
+		"credit_avg" : 4520.0325
+	},
+	{
+		"_id" : "USD",
+		"credit_sum" : 74680.98,
+		"credit_avg" : 4978.732
+	},
+	{
+		"_id" : "ZAR",
+		"credit_sum" : 11790.92,
+		"credit_avg" : 3930.306666666667
+	},
+	{
+		"_id" : "MMK",
+		"credit_sum" : 4629.42,
+		"credit_avg" : 4629.42
+	},
+	{
+		"_id" : "IQD",
+		"credit_sum" : 4269.39,
+		"credit_avg" : 4269.39
+	},
+	{
+		"_id" : "IRR",
+		"credit_sum" : 26504.239999999998,
+		"credit_avg" : 4417.373333333333
+	},
+	{
+		"_id" : "BOB",
+		"credit_sum" : 5263.3,
+		"credit_avg" : 5263.3
+	},
+	{
+		"_id" : "TJS",
+		"credit_sum" : 4087.71,
+		"credit_avg" : 4087.71
+	},
+	{
+		"_id" : "BWP",
+		"credit_sum" : 4076.29,
+		"credit_avg" : 4076.29
+	},
+	{
+		"_id" : "ETB",
+		"credit_sum" : 5436.11,
+		"credit_avg" : 5436.11
+	},
+	{
+		"_id" : "MXN",
+		"credit_sum" : 50229,
+		"credit_avg" : 5022.9
+	},
+	{
+		"_id" : "RUB",
+		"credit_sum" : 119749.15,
+		"credit_avg" : 4989.547916666666
+	},
+	{
+		"_id" : "JPY",
+		"credit_sum" : 60944.74,
+		"credit_avg" : 5078.7283333333335
+	},
+	{
+		"_id" : "ISK",
+		"credit_sum" : 4316.41,
+		"credit_avg" : 4316.41
+	},
+	{
+		"_id" : "CZK",
+		"credit_sum" : 37156.42,
+		"credit_avg" : 4644.5525
+	},
+	{
+		"_id" : "SRD",
+		"credit_sum" : 5286.68,
+		"credit_avg" : 5286.68
+	},
+	{
+		"_id" : "IDR",
+		"credit_sum" : 323922.59,
+		"credit_avg" : 4907.918030303031
+	},
+	{
+		"_id" : "NOK",
+		"credit_sum" : 4773.66,
+		"credit_avg" : 4773.66
+	},
+	{
+		"_id" : "BGN",
+		"credit_sum" : 21200.88,
+		"credit_avg" : 5300.22
+	},
+	{
+		"_id" : "YER",
+		"credit_sum" : 13712.5,
+		"credit_avg" : 4570.833333333333
+	},
+	{
+		"_id" : "RSD",
+		"credit_sum" : 4276.56,
+		"credit_avg" : 4276.56
+	},
+	{
+		"_id" : "PLN",
+		"credit_sum" : 90770.78,
+		"credit_avg" : 5042.821111111111
+	},
+	{
+		"_id" : "GTQ",
+		"credit_sum" : 5806.3,
+		"credit_avg" : 5806.3
+	},
+	{
+		"_id" : "XAF",
+		"credit_sum" : 14094.66,
+		"credit_avg" : 4698.22
+	},
+	{
+		"_id" : "ALL",
+		"credit_sum" : 3325.48,
+		"credit_avg" : 3325.48
+	},
+	{
+		"_id" : "ARS",
+		"credit_sum" : 23242,
+		"credit_avg" : 4648.4
+	},
+	{
+		"_id" : "PYG",
+		"credit_sum" : 4874.69,
+		"credit_avg" : 4874.69
+	},
+	{
+		"_id" : "NZD",
+		"credit_sum" : 5328.46,
+		"credit_avg" : 5328.46
+	},
+	{
+		"_id" : "KYD",
+		"credit_sum" : 3760.89,
+		"credit_avg" : 3760.89
+	},
+	{
+		"_id" : "BYR",
+		"credit_sum" : 5095.79,
+		"credit_avg" : 5095.79
+	},
+	{
+		"_id" : "CLP",
+		"credit_sum" : 21008.95,
+		"credit_avg" : 5252.2375
+	},
+	{
+		"_id" : "MGA",
+		"credit_sum" : 14560.99,
+		"credit_avg" : 4853.663333333333
+	},
+	{
+		"_id" : "UAH",
+		"credit_sum" : 40471.840000000004,
+		"credit_avg" : 5058.9800000000005
+	},
+	{
+		"_id" : "COP",
+		"credit_sum" : 19746.73,
+		"credit_avg" : 4936.6825
+	},
+	{
+		"_id" : "BRL",
+		"credit_sum" : 49632.020000000004,
+		"credit_avg" : 4512.001818181819
+	},
+	{
+		"_id" : "LYD",
+		"credit_sum" : 8764.99,
+		"credit_avg" : 4382.495
+	},
+	{
+		"_id" : "CUP",
+		"credit_sum" : 15017.34,
+		"credit_avg" : 5005.78
+	},
+	{
+		"_id" : "XOF",
+		"credit_sum" : 17882.05,
+		"credit_avg" : 5960.683333333333
+	},
+	{
+		"_id" : "UZS",
+		"credit_sum" : 3573.03,
+		"credit_avg" : 3573.03
+	},
+	{
+		"_id" : "PEN",
+		"credit_sum" : 18644.94,
+		"credit_avg" : 4661.235
+	},
+	{
+		"_id" : "DOP",
+		"credit_sum" : 20674.739999999998,
+		"credit_avg" : 5168.6849999999995
+	},
+	{
+		"_id" : "ILS",
+		"credit_sum" : 16295.49,
+		"credit_avg" : 5431.83
+	},
+	{
+		"_id" : "VUV",
+		"credit_sum" : 6418.27,
+		"credit_avg" : 6418.27
+	},
+	{
+		"_id" : "HRK",
+		"credit_sum" : 24354.82,
+		"credit_avg" : 4870.964
+	},
+	{
+		"_id" : "XPF",
+		"credit_sum" : 4759.07,
+		"credit_avg" : 4759.07
+	},
+	{
+		"_id" : "NGN",
+		"credit_sum" : 24946.23,
+		"credit_avg" : 4157.705
+	},
+	{
+		"_id" : "NIO",
+		"credit_sum" : 9971.28,
+		"credit_avg" : 4985.64
+	},
+	{
+		"_id" : "HNL",
+		"credit_sum" : 16514.59,
+		"credit_avg" : 5504.863333333334
+	}
+]
