@@ -1,0 +1,50 @@
+﻿[
+  {
+    "actors": {
+"identity": 216,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"name": "Cameron Crowe",
+"born": 1957
+      }
+    }
+  },
+  {
+    "actors": {
+"identity": 176,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"name": "Lilly Wachowski",
+"born": 1967
+      }
+    }
+  },
+  {
+    "actors": {
+"identity": 177,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"name": "Lana Wachowski",
+"born": 1965
+      }
+    }
+  },
+  {
+    "actors": {
+"identity": 327,
+"labels": [
+        "Person"
+      ],
+"properties": {
+"name": "Nancy Meyers",
+"born": 1949
+      }
+    }
+  }
+]
