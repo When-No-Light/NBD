@@ -1,0 +1,148 @@
+1. MATCH p=shortestPath(
+(Darjeeling:town {name:"Darjeeling"})-[*]->(Sandakphu:peak{name:"Sandakphu"})
+)
+RETURN p
+
+2. MATCH p=shortestPath(
+(Darjeeling:town {name:"Darjeeling"})-[*]->(Sandakphu:peak{name:"Sandakphu"})
+)
+WHERE ALL (x IN RELATIONSHIPS(p) WHERE x.winter = 'true')
+
+RETURN p
+
+3. MATCH p = ((Darjeeling:town {name:"Darjeeling"})-[*]->(Sandakphu:peak{name:"Sandakphu"}))
+RETURN p, reduce(totalAge = 0, n IN RELATIONSHIPS(p) | totalAge + n.distance) as distance
+ORDER BY  distance
+
+4. MATCH  (airport:Airport)<-[r:ORIGIN]-(flights)
+RETURN airport, count(*)
+ORDER BY  count(*)
+  
+
+
+5. MATCH path = (origin:Airport { name:"LAX" })<-[r:ORIGIN|DESTINATION*..5]->(destination:Airport)
+WHERE REDUCE(s = 0, n IN [x IN NODES(path) WHERE 'Flight' IN LABELS(x)] |
+  s + [(n)<-[:ASSIGN]-(ticket) | ticket.price][0]
+  ) < 3000
+RETURN path
+
+6. MATCH p = (LAX:Airport {name:"LAX"})<-[:ORIGIN]-(m)-[*1..7]-(n)-[:DESTINATION]->(DAY:Airport{name:"DAY"}) WITH NODES(p) AS nodes 
+unwind nodes as scripts
+MATCH g = (d{class:"economy"})-[:ASSIGN]->(scripts) 
+
+RETURN   nodes,sum(d.price)
+ORDER BY sum(d.price)
+
+
+7. MATCH p = (LAX:Airport {name:"LAX"})<-[:ORIGIN]-(m)-[*1..7]-(n)-[:DESTINATION]->(DAY:Airport{name:"DAY"}) WITH NODES(p) AS nodes 
+unwind nodes as scripts
+MATCH g = (d{class:"economy"})-[:ASSIGN]->(scripts) 
+
+RETURN   nodes,sum(d.price) AS sum
+order by sum ASC LIMIT 1
+
+8. MATCH p = (LAX:Airport {name:"LAX"})<-[:ORIGIN]-(m)-[*1..7]-(n)-[:DESTINATION]->(DAY:Airport{name:"DAY"}) WITH NODES(p) AS nodes 
+unwind nodes as scripts
+MATCH g = (d{class:"business"})-[:ASSIGN]->(scripts) 
+
+RETURN   nodes,sum(d.price) AS sum
+order by sum ASC LIMIT 1
+
+
+
+9. 
+MATCH p = (LAX:Airport )<-[:ORIGIN]-(m)-[*3..7]-(n)-[:DESTINATION]->(DAY:Airport) WITH NODES(p) AS nodes 
+unwind nodes as scripts
+MATCH g = (d{class:"economy"})-[:ASSIGN]->(scripts) 
+
+RETURN   nodes,sum(d.price) AS sum
+order by sum ASC 
+
+
+
+10.
+MATCH p = (LAX:Airport )<-[:ORIGIN]-()-[:DESTINATION]->()<-[:ORIGIN]-()-[:DESTINATION]->(DAY:Airport)  WITH NODES(p) AS nodes 
+WHERE LAX <> DAY
+unwind nodes as scripts
+MATCH g = (d{class:"economy"})-[:ASSIGN]->(scripts) 
+
+RETURN   nodes,sum(d.price) AS sum
+order by sum ASC LIMIT 1
+
+
+
+
+
+
+
+
+
+MATCH p = ((LAX:Airport {name:"MSP"})<-[:ORIGIN]-()-[*1..7]-()-[:DESTINATION]->(DAY:Airport{name:"LAX"}))
+RETURN p
+
+
+MATCH p = ((LAX:Airport {name:"LAX"})<-[:ORIGIN]-(m)-[*1..7]-(n)-[:DESTINATION]->(DAY:Airport{name:"DAY"}))
+RETURN p, RELATIONSHIPS(p) , m,n
+
+
+MATCH p = ((LAX:Airport {name:"LAX"})<-[:ORIGIN]-(m)-[r*1..7]-(n)-[:DESTINATION]->(DAY:Airport{name:"DAY"}))
+RETURN p, RELATIONSHIPS(p) , m,n, NODES(p)
+
+
+MATCH p = (LAX:Airport {name:"LAX"})<-[:ORIGIN]-(m)-[*1..7]-(n)-[:DESTINATION]->(DAY:Airport{name:"DAY"})
+MATCH (o)-[:ASSIGN]->(c:Flight)
+
+RETURN p, RELATIONSHIPS(p) , m,n, NODES(p), o
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MATCH p = (LAX:Airport {name:"LAX"})<-[:ORIGIN]-(m)-[*1..7]-(n)-[:DESTINATION]->(DAY:Airport{name:"DAY"}) WITH NODES(p) AS nodes 
+MATCH (o)-[:ASSIGN]->(c:Flight) WHERE any(x IN nodes WHERE c = x)
+
+RETURN  o,c
+
+
+
+
+
+
+
+
+MATCH p = (LAX:Airport {name:"LAX"})<-[:ORIGIN]-(m)-[*1..7]-(n)-[:DESTINATION]->(DAY:Airport{name:"DAY"}) WITH NODES(p) AS nodes 
+unwind nodes as scripts
+MATCH (o{class:"economy"})-[:ASSIGN]->(scripts) 
+
+RETURN  *, min()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MATCH p = (LAX:Airport {name:"LAX"})<-[:ORIGIN]-(m)-[*1..7]-(n)-[:DESTINATION]->(DAY:Airport{name:"DAY"}) WITH NODES(p) AS nodes 
+unwind nodes as scripts
+MATCH g = (o{class:"economy"})-[:ASSIGN]->(scripts) WITH list(g) as h
+
+RETURN  *, reduce(totalAge = 0,n  IN NODES(g)| totalAge + n.price) as price
