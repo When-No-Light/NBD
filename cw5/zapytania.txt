@@ -1,0 +1,31 @@
+1)
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Harry", "login": "night", "age": 12, "isActive": false}' http://localhost:8098/buckets/s23098/keys/herry
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Marek", "login": "Aks", "age": 23, "isActive": false}' http://localhost:8098/buckets/s23098/keys/marek
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Linus", "login": "Linux", "age": 16, "isActive": false}' http://localhost:8098/buckets/s23098/keys/linus
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Teodor", "login": "Ted", "age": 22, "isActive": true}' http://localhost:8098/buckets/s23098/keys/teodor
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Swon", "login": "R2D2", "age": 19, "isActive": false}' http://localhost:8098/buckets/s23098/keys/swon
+
+2)
+curl -i -XGET  http://localhost:8098/buckets/s23098/keys/herry
+
+3)
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Harry", "login": "night", "age": 12, "isActive": false, "password": "1242235ASd"}' http://localhost:8098/buckets/s23098/keys/herry
+4)
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Swon", "login": "R2D2", "age": 19}' http://localhost:8098/buckets/s23098/keys/swon
+5)
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Linus", "login": "Linux", "age": 32, "isActive": false}' http://localhost:8098/buckets/s23098/keys/linus
+
+6)
+curl -i -XDELETE http://localhost:8098/buckets/s23098/keys/marek
+
+7)
+curl -i -XGET  http://localhost:8098/buckets/s23098/keys/1423215
+
+8)
+curl -i -XPOST -H "Content-Type: application/json" -d '{"name": "Ellison"}' http://localhost:8098/buckets/s23098/keys
+
+9)
+curl -i -XGET  http://localhost:8098/buckets/s23098/keys/6aqstsuihIGcvRfjT1hA22ZsPI0
+
+10)
+curl -i -XDELETE http://localhost:8098/buckets/s23098/keys/6aqstsuihIGcvRfjT1hA22ZsPI0
